@@ -18,7 +18,5 @@ locals {
 
 resource "aws_fms_admin_account" "default" {
   count    = local.enabled && var.admin_account_enabled ? 1 : 0
-  provider = aws.admin
-
   account_id = var.admin_account_id
 }
