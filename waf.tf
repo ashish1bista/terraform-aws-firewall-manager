@@ -27,6 +27,14 @@ resource "aws_fms_policy" "waf" {
     }
   }
 
+  dynamic "include_map" {
+    for_each = lookup(each.value, "include_orgunit_ids", [])
+
+    content {
+      orgunit = include_map.value
+    }
+  }
+
   dynamic "exclude_map" {
     for_each = lookup(each.value, "exclude_account_ids", [])
 

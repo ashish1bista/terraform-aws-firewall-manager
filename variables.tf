@@ -189,6 +189,8 @@ variable "waf_policies" {
       A list of AWS Organization member Accounts that you want to exclude from this AWS FMS Policy.
     include_account_ids:
       A list of AWS Organization member Accounts that you want to include for this AWS FMS Policy.
+    include_orgunit_ids:
+      A list of AWS Organization Units that you want to include for this AWS FMS Policy.
     policy_data:
       default_action:
         The action that you want AWS WAF to take.
@@ -224,6 +226,8 @@ variable "waf_v2_policies" {
       A list of AWS Organization member Accounts that you want to exclude from this AWS FMS Policy.
     include_account_ids:
       A list of AWS Organization member Accounts that you want to include for this AWS FMS Policy.
+    include_orgunit_ids:
+      A list of AWS Organization Units that you want to include for this AWS FMS Policy.
     policy_data:
       default_action:
         The action that you want AWS WAF to take.
